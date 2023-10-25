@@ -1,0 +1,39 @@
+<div class="container bg-light g-2">
+    <p>two-way-binding </p>
+    <input type="text" placeholder="ENter your Full Name" (input)="inputname($event)" >
+    <p>Your Full Name is: {{inputtxt}}</p>
+</div>
+<hr>
+<div class="container bg-light g-2">
+    
+    <img [src]='currentimage'><br>
+   <button (click)= "next()" class="btn btn-danger g-2">Next</button>
+   <button (click)= "previous()" class="btn btn-danger g-2">Previous</button>
+   <button (click)= "start()" class="btn btn-danger">Start</button>
+   <button (click)= "stop()" class="btn btn-danger">Stop</button>
+</div>
+<hr>
+
+
+
+
+
+<hr>
+<div class="container bg-light g-2" >
+
+    <form (submit)="SaveData()">
+        <input type="text" name="name" placeholder="enter name" [(ngModel)] ="formName">
+        <input type="text" name="Address" placeholder="enter Address" [(ngModel)] ="formAddress">
+        <input type="number" name="Age" placeholder="enter Age" [(ngModel)] ="formAge">
+        <br>
+        <input type="submit" value="Save">
+
+    </form>
+
+    <p>From Data
+    {{formName}}::  {{formAddress}}::{{formAge}}
+</p>
+
+</div>
+
+

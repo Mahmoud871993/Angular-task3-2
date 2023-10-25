@@ -1,0 +1,13 @@
+
+
+<p #myp>This is a test text</p>
+<button class="btn btn-warning" (click)="PrintMessage('message sent')">Click me</button>
+<hr>
+<button class="btn btn-warning" (click)="PrintMessage2(myp)">Click me</button>
+<hr>
+<button class="btn btn-warning" (click)="PrintMessage3($event)">Click me</button>
+
+<hr>
+<div #mydiv>
+    <p>How are you doing?</p>
+</div>
